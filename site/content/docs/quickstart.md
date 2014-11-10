@@ -32,6 +32,8 @@ docker run -it -p 8080:8080 -d --name shipyard \
 
 Shipyard will create a default user account with the username `admin` and the password `shipyard`.  You should then be able to open a browser to `http://<your-host-ip>:8080` and see the Shipyard login.
 
+> Note: If docker is running within a VM, you probably want to additionally [forward the Shipyard UI port to the host OS](/docs/faq/#port-forwarding-for-shipyard-running-in-a-vm). For example, Boot2Docker users on OSX can run `boot2docker ssh -L 8080:localhost:8080` and then connect to `http://localhost:8080/` from their browser of choice.
+
 # Engine
 You can then either use the web UI or the CLI to add an engine.  
 
